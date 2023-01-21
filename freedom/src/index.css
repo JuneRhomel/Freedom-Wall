@@ -30,6 +30,8 @@ p {
 button {
   background-color: var(--btn-color);
   color: #ffffff;
+  font-weight: 700;
+  border: none;
 }
 .navigation {
   display: flex;
@@ -73,6 +75,9 @@ border-radius: 6px;
 }
 .body-card {
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .all-cards {
   margin-top: 1em;
@@ -82,8 +87,71 @@ border-radius: 6px;
   position: fixed;
   right: 50px;
   bottom: 50px;
+  cursor: pointer;
 }
 .add-btn i {
   color: var(--btn-color);
   font-size: 3em;
+}
+.card-upload {
+  position: absolute;
+  border-radius: 6px;
+  max-width: 65em;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.btn-upload {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.btn-upload button{
+  border: none;
+  width: 100px;
+  height: 25px;
+  border-radius: 6px;
+}
+.btn-upload-send {
+  width: 140px;
+  height: 40px;
+  border-radius: 6px;
+}
+.btn-upload-box {
+  text-align: end;
+}
+.card-upload textarea {
+  width: 100%;
+  resize: none;
+  font-size: 13px;
+}
+.center {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgba(217, 217, 217, 0.01);
+backdrop-filter: blur(7.5px);
+}
+.exit {
+  transform: translateX(-50px);
+  z-index: -1;
+  right: -40px;
+  top: 0;
+  position: absolute;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;  
+  border-radius: 50%;
+  color: #ffffff;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.action-hover {
+  transform: translateX(0px) !important;
+
 }
