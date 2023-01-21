@@ -55,6 +55,10 @@ button {
 .account h3, a {
   font-size: 13px;
 }
+.account small {
+  color: var(--btn-color);
+  cursor: pointer;
+}
 .card {
   width: 20em;
 
@@ -96,7 +100,8 @@ border-radius: 6px;
 .card-upload {
   position: absolute;
   border-radius: 6px;
-  max-width: 65em;
+  width: 100%;
+  max-width: 35em;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }

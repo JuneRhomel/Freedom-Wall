@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LogIn from "./LogIn";
 
-export const Nav = () => {
+export default function Nav() {
+    const [openAccount, setopenAccount] = useState(false)
+    const accountLogin = () => {
+        setopenAccount(true)
+    }
     return (
         <header>
             <div className='navigation'>
@@ -12,12 +18,13 @@ export const Nav = () => {
             <div className='account'>
                 <div>
                     <h3>june rhomel</h3>
-                    <a href=''>My Account</a>
+                    <small onClick={accountLogin}>My Account</small>
                 </div>
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" />
             </div>
             </div>
+            {openAccount?<LogIn/>:""}
+            
         </header>
     )
 }
-

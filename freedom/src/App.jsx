@@ -1,13 +1,15 @@
 
 import React from 'react'
-import Cards from './components/Cards'
-import { Nav } from './components/Nav'
-
+import LogIn from './components/LogIn'
+import Home from './components/Home'
+import { Route, Routes } from 'react-router-dom'
 export default function App() {
   return (
     <>
-    <Nav/>
-    <Cards/>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/login' element={<LogIn/>}/>
+    </Routes>
     </>
   )
 }
