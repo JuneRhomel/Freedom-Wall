@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Add from '../components/Add'
+import {useDrag} from "react-use-gesture"
 
 export default function Cards() {
+    const [drag,setDrag] = useState({x:100, y:0})
+    const bindCardPos = useDrag((param)=> { 
+        setDrag({
+            x:param.offset[0],
+            y:param.offset[1],
+        })
+    })
+
     return (
         <section className='all-cards'>
-            <div className='card'>
-                <div className='head-card'>
+            <div {...bindCardPos()} className='card' style={{
+                'position':'relative',
+                "top": drag.y,
+                "left": drag.x
+                
+                }}>
+                <div  className='head-card'>
                     <h2>June Rhomel</h2>
                     <p>Jun 2, 2023</p>
                 </div>
