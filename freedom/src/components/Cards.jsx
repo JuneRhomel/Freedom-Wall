@@ -3,7 +3,9 @@ import Add from '../components/Add'
 import {useDrag} from "react-use-gesture"
 
 export default function Cards() {
-    const [drag,setDrag] = useState({x:100, y:0})
+    const randomPosX = Math.floor(Math.random()* 1000)
+    const randomPosY = Math.floor(Math.random()* 900)
+    const [drag,setDrag] = useState({x:randomPosX, y:randomPosY})
     const bindCardPos = useDrag((param)=> { 
         setDrag({
             x:param.offset[0],
@@ -13,8 +15,9 @@ export default function Cards() {
 
     return (
         <section className='all-cards'>
+            <p>{drag.x}</p>
             <div {...bindCardPos()} className='card' style={{
-                'position':'relative',
+                "position":"absolute",
                 "top": drag.y,
                 "left": drag.x
                 

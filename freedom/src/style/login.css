@@ -2,6 +2,7 @@
     width: 70em;
     height: 50em;
     position: relative;
+    
 }
 .login {
     background-color: #ffffff;
@@ -11,6 +12,9 @@
     gap: 1em;
     width: 100%;
     height: 100%;
+    border-radius: 6px;
+    padding: 10px;
+
 }
 .signup-box {
     flex-basis: 50%;
@@ -120,4 +124,46 @@
     right: 30px;
     cursor: pointer;
     color: var( --btn-color);
+}
+
+@media only screen and (max-width: 1568px) {
+    .main-account {
+        height: 34em;
+        max-width: 60em;
+    }
+    .acount-input {
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid #adadad;
+        outline: none;
+    }
+    .form-login h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .or {
+        margin-top: 13px;
+    }
+    .socila-login {
+        margin-top: 15px;
+    }
+    .socila-login i {
+        font-size: 30px;
+    }
+    .form-login b {
+        font-size: 12px;
+        top: 16px;
+    }
+    .signup-box b {
+        font-size: 12px;
+        top: 16px;
+    }
+    .signup-box h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .login label {
+        font-size: 13px;
+        color: #757575;
+    }
 }

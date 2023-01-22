@@ -149,6 +149,7 @@ button {
   place-items: center;
   background: rgba(217, 217, 217, 0.01);
 backdrop-filter: blur(7.5px);
+z-index: 999;
 }
 .exit {
   transform: translateX(-50px);
